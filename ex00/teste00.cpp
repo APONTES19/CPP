@@ -12,7 +12,9 @@ char **FtTwoPointer(string &input, char **&argv);
 int	main(){
 	cout << "\n 	Test 00	 \n\n";
 	checkNumberArgc();
+	cout << "\n 	Test 01	 \n\n";
 	checkArgv();
+	cout << "\n 	Test 02	 \n\n";
 	checkYourSelf();
 	return 0;
 }

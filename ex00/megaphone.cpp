@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 11:04:21 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/08/20 16:06:49 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/08/20 17:47:55 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ char **megaphone(int argc, char **argv){
 					argv[i][j] = argv[i][j] -32;
 				j++;
 			}
+			i++;
+		}
+		i = 0;
+		while(argv[i]){
+			std::cout << argv[i];
 			i++;
 		}
 	}
