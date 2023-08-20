@@ -6,7 +6,7 @@
 #    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/20 11:04:14 by lucasmar          #+#    #+#              #
-#    Updated: 2023/08/20 17:58:59 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/08/20 13:54:01 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,8 @@ NAME=megaphone
 
 SRC_PATH=./
 
-SRC_FILES=megaphone.cpp
-
+SRC_FILES=megaphone.cpp\
+		  teste00.cpp
 
 SRC=$(addprefix $(SRC_PATH),$(SRC_FILES))
 
@@ -44,6 +44,9 @@ $(NAME):
 		@echo "	ex: ./megaphone test "Your Frase" "
 		@echo "	resp.: TEST YOUR FRASE "
 		@echo "\033[0m"
+
+#execução
+#	@./megaphone
 
 clean:
 		@$(RM) $(NAME)

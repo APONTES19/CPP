@@ -6,18 +6,18 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 11:04:21 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/08/20 18:00:47 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/08/20 18:02:59 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-int	main(int argc, char **argv){
+char **megaphone(int argc, char **argv){
 	int i;
 	int j;
 
 	if(argc < 2){
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
+		std::cout << "\nError 00: Need two or more argments\n" << std::endl;
 		return (0);
 	}
 	else{
@@ -31,12 +31,12 @@ int	main(int argc, char **argv){
 			}
 			i++;
 		}
-		i = 1;
+		i = 0;
 		while(argv[i]){
 			std::cout << argv[i];
 			i++;
 		}
-		std::cout << std::endl;
+		std::cout << std:endl;
 	}
-	return 0;
+	return (argv);
 }
