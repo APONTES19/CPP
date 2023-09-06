@@ -1,40 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   View.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/20 11:04:21 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/09/04 16:23:59 by lucasmar         ###   ########.fr       */
+/*   Created: 2023/09/04 14:53:56 by lucasmar          #+#    #+#             */
+/*   Updated: 2023/09/06 16:50:29 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#ifndef VIEW_HPP
+# define VIEW_HPP
 
-int	main(int argc, char **argv){
+# include "Contact.hpp"
+# include "PhoneBook.hpp"
+# include <limits>
 
-	if(argc < 2){
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-		return (0);
-	}
-	else{
-		int	i;
-		int	j;
-		std::string phrase;
+class View{
+	private:
+	PhoneBook phoneBook;
 
-		j = 1;
-		while(argv[j]){
-			i = 0;
-			while(argv[j][i]){
-				phrase += std::toupper(argv[j][i]);
-				i++;
-			}
-			j++;
-		}
+	public:
+	View();
+	~View();
+	int	menu(void);
 
-		std::cout << phrase << std::endl;
-	}
-	return 0;
-}
+	private:
+	int	getInputContact(void);
+	std::string	InputNew(std::string menssage, int i);
+};
+
+#endif
+
+
