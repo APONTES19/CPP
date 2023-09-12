@@ -6,7 +6,7 @@
 #    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/20 11:04:14 by lucasmar          #+#    #+#              #
-#    Updated: 2023/09/11 22:03:18 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/09/12 14:49:45 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ NAME=phoneBook
 SRC_PATH=./
 OBJ_PATH=./obj/
 
+vpath ./Teste
 
 SRC_FILES=Main.cpp\
 		  Contact.cpp\

@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 17:19:38 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/09/11 21:37:56 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/09/12 14:51:38 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,29 +72,13 @@
 	}
 
 	void	PhoneBook::Print10Char(std::string word, int l){
-		int	i;
-		int	j;
-		int	x;
 
-		i = 0;
-		x = 0;
-		j = word.length();
-		if (j == 10)
-			x = 1;
-		while(i <= 9){
-			while(j > 0 && i<= 9){
-				if(i == 9 && x == 0){
-					std::cout << ".";
-					break;
-				}
-				std::cout << word[i];
-				j--;
-				i++;
-			}
-			if(j == 0 && i <= 9)
-				std::cout << " ";
-			i++;
+		if (word.length() > 10){
+			word = word.substr(0,9);
+			std::cout <<word << ".";
 		}
+		else
+			std::cout << std::setw(10) << std::left << word;
 		if (l == 1){
 			std::cout << "|";
 		}

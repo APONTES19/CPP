@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   phoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 14:53:56 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/09/06 19:39:53 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/09/12 14:47:44 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "Contact.hpp"
 # include <stdexcept>
 # include <stdlib.h>
+# include <iomanip>
 
 class PhoneBook{
 	private:
