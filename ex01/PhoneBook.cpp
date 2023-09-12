@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 17:19:38 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/09/06 20:03:31 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/09/11 21:37:56 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@
 			return(true);
 		}
 		else{
-			std::cout << "	- :( Sorry! no contacts yet!" << std::endl;
+			std::cout << "	- 🔴 :( Sorry! no contacts yet!" << std::endl;
 			return(false);
 		}
 	}
