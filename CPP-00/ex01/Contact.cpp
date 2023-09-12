@@ -67,7 +67,7 @@
 
 	bool	Contact::checkNull(){
 
-		if(this->_id < 0 && this->_id >= 8){
+		if(this->_id < 0 || this->_id >= 8){
 			std::cout << "Valor do id: " << _id << std::endl;
 			return (false);
 		}

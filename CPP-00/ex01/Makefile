@@ -6,7 +6,7 @@
 #    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/20 11:04:14 by lucasmar          #+#    #+#              #
-#    Updated: 2023/09/12 14:49:45 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/09/12 20:54:32 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,27 +16,27 @@ NAME=phoneBook
 SRC_PATH=./
 OBJ_PATH=./obj/
 
-vpath ./Teste
-
-SRC_FILES=Main.cpp\
+SRC_FILES=main.cpp\
 		  Contact.cpp\
-		  Contact.hpp\
 		  PhoneBook.cpp\
-		  PhoneBook.hpp\
-		  View.hpp\
 		  View.cpp
+
+INCLUDE=PhoneBook.hpp\
+		View.hpp\
+		Contact.hpp
+
 
 SRC=$(addprefix $(SRC_PATH),$(SRC_FILES))
 OBJ=$(SRC:$(SRC_PATH)%.cpp=$(OBJ_PATH)%.o)
 
 
 # compilation **************************************************************** #
-CC=c++
+CC=clang++
 FLAG=-Wall -Wextra -Werror -std=c++98
 
 # clean ********************************************************************** #
-RM=-rm -f
-RM_DIR= rm -rf
+RM=rm -f
+RM_DIR=rm -rf
 
 
 # rules ********************************************************************** #
@@ -46,9 +46,8 @@ $(OBJ_PATH)%.o: %.cpp
 	@mkdir -p $(OBJ_PATH)
 	@$(CC) $(FLAG) -c $< -o $@
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(INCLUDE)
 	@$(CC) $(FLAG) $(OBJ) -o $@
-
 
 # message in terminal ************ #
 		@echo "\033[1;32m"
