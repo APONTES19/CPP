@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 15:34:07 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/09/13 17:01:32 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/09/18 16:39:59 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,10 @@ class Weapon{
 
 	public:
 		Weapon(std::string type);
+		~Weapon(void);
 
-		const std:string getType() const;
-		void setType();
+		const std::string &getType(void);
+		void setType(std::string type);
 };
 
 #endif

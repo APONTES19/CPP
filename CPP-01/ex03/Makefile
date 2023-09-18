@@ -6,7 +6,7 @@
 #    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/12 15:13:15 by lucasmar          #+#    #+#              #
-#    Updated: 2023/09/13 15:33:31 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/09/18 16:38:48 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,13 +16,13 @@ NAME=weapon
 SRC_PATH=./
 OBJ_PATH=./obj/
 
-SRC_FILES=main.cpp/
-		  HumanA.cpp/
-		  HumanB.cpp/
-		  Weapon.cpp/
+SRC_FILES=main.cpp\
+		  HumanA.cpp\
+		  HumanB.cpp\
+		  Weapon.cpp
 
-INCLUDE=HumanA.hpp/
-		HumanB.hpp/
+INCLUDE=HumanA.hpp\
+		HumanB.hpp\
 		Weapon.hpp
 
 
@@ -30,7 +30,7 @@ SRC=$(addprefix $(SRC_PATH),$(SRC_FILES))
 OBJ=$(SRC:$(SRC_PATH)%.cpp=$(OBJ_PATH)%.o)
 
 # compilation **************************************************************** #
-CC=c++
+CC=clang++
 FLAG=-Wall -Wextra -Werror -std=c++98
 
 # clean ********************************************************************** #

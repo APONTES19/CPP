@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 16:54:29 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/09/13 16:55:09 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/09/18 16:38:20 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Weapon::~Weapon(void){
 	return;
 };
 
-const std:string &Weapon::getType() const{
+const std::string &Weapon::getType(void){
 	return(this->_type);
 };
 
