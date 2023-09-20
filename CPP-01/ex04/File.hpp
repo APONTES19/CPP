@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 06:16:09 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/09/20 14:10:16 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/09/20 17:41:35 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <fstream>
 #include <iostream>
 #include <cstring>
+#include <sstream>
 
 class File{
 	public:
@@ -27,4 +28,5 @@ class File{
 	private:
 	std::ofstream *_touchFile(char *filename);
 	std::string	_swapWord(std::string s1, std::string s2, std::string line);
+	std::string	_swapWhile(std::string s1, std::string s2, std::string line);
 };
