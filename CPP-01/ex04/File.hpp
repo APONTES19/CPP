@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   File.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 16:54:29 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/09/20 05:40:16 by lucasmar         ###   ########.fr       */
+/*   Created: 2023/09/20 06:16:09 by lucasmar          #+#    #+#             */
+/*   Updated: 2023/09/20 14:10:16 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Weapon.hpp"
+#include <string>
+#include <stdexcept>
+#include <fstream>
+#include <iostream>
+#include <cstring>
 
-Weapon::Weapon(std::string type){
-	this->_type = type;
-};
+class File{
+	public:
+	File(void);
+	~File(void);
 
-Weapon::~Weapon(void){
-	return;
-};
+	int	open(char *filename);
+	void	replace(char *filename, std::string s1, std::string s2);
 
-const std::string &Weapon::getType(void){
-	return(this->_type);
-};
-
-void Weapon::setType(std::string type){
-	this->_type = type;
+	private:
+	std::ofstream *_touchFile(char *filename);
+	std::string	_swapWord(std::string s1, std::string s2, std::string line);
 };
