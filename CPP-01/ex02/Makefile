@@ -6,7 +6,7 @@
 #    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/12 15:13:15 by lucasmar          #+#    #+#              #
-#    Updated: 2023/09/13 15:32:28 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/09/20 22:16:11 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRC=$(addprefix $(SRC_PATH),$(SRC_FILES))
 OBJ=$(SRC:$(SRC_PATH)%.cpp=$(OBJ_PATH)%.o)
 
 # compilation **************************************************************** #
-CC=c++
+CC=clang++
 FLAG=-Wall -Wextra -Werror -std=c++98
 
 # clean ********************************************************************** #
