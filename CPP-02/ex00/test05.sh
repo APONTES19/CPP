@@ -1,6 +1,6 @@
 #!/bin/bash
 
-name="./harl"
+name="./fixed"
 comando=0
 function next(){
 	echo
@@ -36,7 +36,7 @@ echo
 
 next
 ((comando++))#1
-echo " ☢️	$comando - Testando Harl -> ./harl "
+echo " ☢️	$comando - Testando fixed -> ./fixed "
 echo "<----------------------------------------------------------------------->"
 echo
 $name
