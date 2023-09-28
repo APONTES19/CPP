@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 21:13:21 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/09/27 20:54:40 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/09/28 14:34:00 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,26 +122,6 @@ void YourNumbers(){
 		std::cout << std::endl;
 	}
 
-	std::cout << "	->Operador const  \" + \"  \n" << std::endl;
-	{
-		Fixed const a = 10.59f;
-		Fixed const b = 10.59f;
-
-		std::cout << "		a = " << a << " + b = " << b << std::endl;
-		std::cout << "		*Resultado =>>  " << a + b << std::endl;
-		std::cout << std::endl;
-	}
-
-	std::cout << "	->Operador const\" - \"  \n" << std::endl;
-	{
-		Fixed const a = 10.59f;
-		Fixed const b = 10.59f;
-
-		std::cout << "		a = " << a << " - b = " << b << std::endl;
-		std::cout << "		*Resultado =>>  " << a - b << std::endl;
-		std::cout << std::endl;
-	}
-
 	std::cout << "	->Operador \" * \"  \n" << std::endl;
 	{
 		Fixed a = 10.5942f;
@@ -162,8 +142,7 @@ void YourNumbers(){
 		std::cout << std::endl;
 	}
 
-	std::cout << "	->Operador \" - \"  \n" << std::endl;
-	{
+	std::cout << "	->Operador \" - \"  \n" << std::endl;{
 		Fixed a = 30.42f;
 		Fixed b = 2;
 
@@ -172,28 +151,24 @@ void YourNumbers(){
 		std::cout << std::endl;
 	}
 
-	std::cout << "	->Operador \" + \"  \n" << std::endl;
-	{
-		Fixed a = 30.42f;
-		Fixed b = 2;
+	std::cout << "	->Operador const\" - \"  \n" << std::endl;{
+		Fixed const a = 10.59f;
+		Fixed const b = 10.59f;
 
-		std::cout << "		a = " << a << " + b = " << b << std::endl;
-		std::cout << "		*Resultado =>>  " << a + b << std::endl;
+		std::cout << "		a = " << a << " - b = " << b << std::endl;
+		std::cout << "		*Resultado =>>  " << a - b << std::endl;
 		std::cout << std::endl;
 	}
 
-	std::cout << "	->Operador \" ++ \"  \n" << std::endl;
-	{
-		Fixed a = 30.42f;
+	std::cout << "	->Operador \" -- \"  \n" << std::endl;{
+		Fixed a = 30.5f;
 
-		std::cout << "		a = " << a << " a++ " << std::endl;
-		std::cout << "		*Resultado antes =>>  " << a++ << std::endl;
-		std::cout << "		*Resultado depois =>>  " << a << std::endl;
+		std::cout << "		a = " << a << " --a " << std::endl;
+		std::cout << "		*Resultado =>>  " << --a << std::endl;
 		std::cout << std::endl;
 	}
 
-	std::cout << "	->Operador \" -- \"  \n" << std::endl;
-	{
+	std::cout << "	->Operador \" -- \"  \n" << std::endl;{
 		Fixed a = 30.5f;
 
 		std::cout << "		a = " << a << " a-- " << std::endl;
@@ -202,8 +177,35 @@ void YourNumbers(){
 		std::cout << std::endl;
 	}
 
-	std::cout << "	->Operador \" ++ \"  \n" << std::endl;
+	std::cout << "	->Operador \" + \"  \n" << std::endl;{
+		Fixed a = 30.42f;
+		Fixed b = 2;
+
+		std::cout << "		a = " << a << " + b = " << b << std::endl;
+		std::cout << "		*Resultado =>>  " << a + b << std::endl;
+		std::cout << std::endl;
+	}
+
+	std::cout << "	->Operador const  \" + \"  \n" << std::endl;
 	{
+		Fixed const a = 10.59f;
+		Fixed const b = 10.59f;
+
+		std::cout << "		a = " << a << " + b = " << b << std::endl;
+		std::cout << "		*Resultado =>>  " << a + b << std::endl;
+		std::cout << std::endl;
+	}
+	
+	std::cout << "	->Operador \" ++ \"  \n" << std::endl;{
+		Fixed a = 30.42f;
+
+		std::cout << "		a = " << a << " a++ " << std::endl;
+		std::cout << "		*Resultado antes =>>  " << a++ << std::endl;
+		std::cout << "		*Resultado depois =>>  " << a << std::endl;
+		std::cout << std::endl;
+	}
+
+	std::cout << "	->Operador \" ++ \"  \n" << std::endl;{
 		Fixed a = 30.42f;
 
 		std::cout << "		a = " << a << " ++a " << std::endl;
@@ -211,17 +213,7 @@ void YourNumbers(){
 		std::cout << std::endl;
 	}
 
-	std::cout << "	->Operador \" -- \"  \n" << std::endl;
-	{
-		Fixed a = 30.5f;
-
-		std::cout << "		a = " << a << " --a " << std::endl;
-		std::cout << "		*Resultado =>>  " << --a << std::endl;
-		std::cout << std::endl;
-	}
-
-	std::cout << "	->Operador \" min \"  \n" << std::endl;
-	{
+	std::cout << "	->Operador \" min \"  \n" << std::endl;{
 		Fixed a = 30.5f;
 		Fixed b = 68.5f;
 
@@ -230,8 +222,7 @@ void YourNumbers(){
 		std::cout << std::endl;
 	}
 
-	std::cout << "	->Operador const \" min \"  \n" << std::endl;
-	{
+	std::cout << "	->Operador const \" min \"  \n" << std::endl;{
 		Fixed const a = 30.5f;
 		Fixed const b = 68.5f;
 
@@ -240,8 +231,7 @@ void YourNumbers(){
 		std::cout << std::endl;
 	}
 
-	std::cout << "	->Operador \" max \"  \n" << std::endl;
-	{
+	std::cout << "	->Operador \" max \"  \n" << std::endl;{
 		Fixed a = 30.5f;
 		Fixed b = 68.5f;
 
@@ -250,8 +240,7 @@ void YourNumbers(){
 		std::cout << std::endl;
 	}
 
-	std::cout << "	->Operador const \" max \"  \n" << std::endl;
-	{
+	std::cout << "	->Operador const \" max \"  \n" << std::endl;{
 		Fixed const a = 30.5f;
 		Fixed const b = 68.5f;
 

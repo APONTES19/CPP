@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:25:51 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/09/27 20:49:26 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/09/28 14:27:39 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,14 +85,6 @@ bool	Fixed::operator!=(Fixed const &fixed) const{
 	return(this->_rawBits != fixed.getRawBits());
 }
 
-Fixed	Fixed::operator+(Fixed const &fixed) const{
-	return (Fixed(this->toFloat()+ fixed.toFloat()));
-}
-
-Fixed	Fixed::operator-(Fixed const &fixed) const{
-	return (Fixed(this->toFloat() - fixed.toFloat()));
-}
-
 Fixed	Fixed::operator*(Fixed const &fixed) const{
 	return (Fixed(this->toFloat() * fixed.toFloat()));
 }
@@ -105,33 +97,54 @@ Fixed	Fixed::operator-(void){
 	return (Fixed(-1 * this->toFloat()));
 }
 
+Fixed	Fixed::operator-(Fixed const &fixed) const{
+	return (Fixed(this->toFloat() - fixed.toFloat()));
+}
+
+Fixed	Fixed::operator--(void){
+	float temp;
+
+	temp = this->toFloat();
+	--temp;
+	*this = Fixed(temp);
+	return (Fixed(this->toFloat()));
+}
+
+Fixed	Fixed::operator--(int){
+	Fixed	temp(*this);
+	float	temp2;
+
+	temp2 = this->toFloat();
+	temp2--;
+	*this = Fixed(temp2);
+	return (temp);
+}
+
 Fixed	Fixed::operator+(void){
 	return (Fixed(this->toFloat()));
 }
 
-Fixed	Fixed::operator++(void){
-	++this->_rawBits;
-	return (Fixed(this->toFloat()));
+Fixed	Fixed::operator+(Fixed const &fixed) const{
+	return (Fixed(this->toFloat()+ fixed.toFloat()));
 }
 
-Fixed	Fixed::operator--(void){
-	--this->_rawBits;
+Fixed	Fixed::operator++(void){
+	float temp;
+
+	temp = this->toFloat();
+	++temp;
+	*this = Fixed(temp);
 	return (Fixed(this->toFloat()));
 }
 
 Fixed	Fixed::operator++(int){
-	float  tmp;
+	Fixed	temp(*this);
+	float	temp2;
 
-	tmp = this->toFloat();
-	this->_rawBits++;
-	return (Fixed(tmp));
-}
-
-Fixed	Fixed::operator--(int){
-	Fixed	tmp(*this);
-
-	this->_rawBits--;
-	return (tmp);
+	temp2 = this->toFloat();
+	temp2++;
+	*this = Fixed(temp2);
+	return (temp);
 }
 
 Fixed	&Fixed::min(Fixed &arg1, Fixed &arg2){
