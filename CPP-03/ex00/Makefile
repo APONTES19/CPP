@@ -6,7 +6,7 @@
 #    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/12 15:13:15 by lucasmar          #+#    #+#              #
-#    Updated: 2023/09/28 14:53:12 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/10/05 16:55:44 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,10 +17,10 @@ SRC_PATH=./
 OBJ_PATH=./obj/
 
 SRC_FILES=main.cpp\
-		  clapTrap.cpp
+		  ClapTrap.cpp
 
 
-INCLUDE=clapTrap.hpp
+INCLUDE=ClapTrap.hpp
 
 
 SRC=$(addprefix $(SRC_PATH),$(SRC_FILES))
