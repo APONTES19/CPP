@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 14:54:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/10/11 19:08:02 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/10/11 19:43:58 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@ class ClapTrap{
 
 	void	statusClapTrap();
 
-	private:
+	protected:
 	int	checkClapTrap(void);
 
-	private:
+	protected:
 	std::string	_name;
 	int	_hitPoints;
 	int	_energyPoints;

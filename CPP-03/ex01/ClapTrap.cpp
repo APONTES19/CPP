@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 14:54:17 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/10/11 19:08:22 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/10/11 20:13:11 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,16 @@ ClapTrap::ClapTrap(void){
 	this->_hitPoints = 10;
 	this->_energyPoints = 10;
 	this->_attackDamage = 0;
+	this->_name = "";
 	std::cout << this->_name << " -> ClapTrap successfully created!🟢" << std::endl;
 	return;
 }
 
 ClapTrap::ClapTrap(std::string name){
+	this->_name = name;
 	this->_hitPoints = 10;
 	this->_energyPoints = 10;
 	this->_attackDamage = 0;
-	this->_name = name;
 	std::cout << this->_name << " -> ClapTrap successfully created!🟢" << std::endl;
 	return;
 }
